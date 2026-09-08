@@ -1,7 +1,31 @@
 .audio{
-    color: greenyellow;
+    color: rgb(150, 238, 18);
 }
 
 .video{
     color: red;
+}
+
+:root {
+    --cor-principal: #EE7622;
+    --cor-clara: #F7B98D;
+    --cor-media: #EE7622;
+    --cor-escura: #7A3B0E;
+}
+
+.cor-amostra {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.cor-principal { background-color: var(--cor-principal); }
+.cor-clara { background-color: var(--cor-clara); }
+.cor-media { background-color: var(--cor-media); }
+.cor-escura { background-color: var(--cor-escura); }
+
+h1 {
+    color: var(--cor-principal);
 }
