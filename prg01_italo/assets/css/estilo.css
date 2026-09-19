@@ -29,3 +29,56 @@
 h1 {
     color: var(--cor-principal);
 }
+
+/* ---------- Menu de navegação ---------- */
+
+/* Remove o estilo padrão de lista (bolinhas) e deixa os itens
+   um do lado do outro, em vez de um embaixo do outro */
+
+#menu ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px;
+    margin: 0;
+    background-color: var(--cor-principal);
+}
+
+#menu li {
+    padding: 0;             /* tira o padding duplicado do item */
+}
+
+/*Cada item do menu */
+#menu li a{
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*efeito ao passar o mouse em cima do link*/
+#menu li a:hover{
+    color: var(--cor-escura);
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-radius: 4px;
+}
+
+.segundario{
+    text-decoration: none;
+    color: rgb(85, 240, 150);
+}
+
+.segundario:hover{
+    color: rgb(47, 125, 241);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Quando a tela for menor que 600px de largura, o menu
+   empilha os itens verticalmente em vez de lado a lado */
+@media (max-width: 600px) {
+    #menu ul {
+        flex-direction: column;
+    }
+}
