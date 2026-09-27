@@ -103,3 +103,121 @@ audio{
     max-width: 100%;
 }
 
+.btn-login{
+    display: inline-block;
+    background-color: var(--cor-escura);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.btn-login:hover{
+    background-color: var(--cor-clara);
+}
+
+.login-container {
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.campo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Borda vermelha quando o campo está inválido (classe adicionada via JS) */
+.campo-invalido {
+    border-color: red !important;
+}
+
+/* Mensagem de erro abaixo do campo */
+.erro {
+    color: red;
+    font-size: 0.85em;
+    min-height: 1em;
+}
+
+.admin-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.tabela-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.tabela-usuarios th,
+.tabela-usuarios td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-usuarios th {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+/* Zebra: linhas alternadas com fundo levemente diferente, facilita leitura */
+.tabela-usuarios tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.btn-editar,
+.btn-excluir {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+.btn-editar {
+    background-color: var(--cor-media);
+}
+
+.btn-editar:hover {
+    background-color: var(--cor-escura);
+}
+
+.btn-excluir {
+    background-color: #cc3333;
+}
+
+.btn-excluir:hover {
+    background-color: #991f1f;
+}
+
+/* Responsividade: tabela vira scroll horizontal em telas pequenas,
+   em vez de espremer as colunas e ficar ilegível */
+@media (max-width: 600px) {
+    .tabela-usuarios {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
