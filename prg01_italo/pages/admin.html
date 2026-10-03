@@ -6,73 +6,81 @@
     <title>Painel Administrativo - Hyperpes</title>
      <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/estilo.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 </head>
 <body style="background-color: rgba(230, 182, 121, 0.432);">
     
-    <main class="admin-container">
-        <h1>Painel Administrativo</h1>
-        <p>Lista de usuariao cadastrados</p>
+    <main class="container mt-4">
+    <h1>Painel Administrativo</h1>
+    <p class="text-muted">Lista de usuários cadastrados</p>
 
-        <table class="tabela-usuarios">
-             <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Ana Souza</td>
-                    <td>ana.souza@email.com</td>
-                    <td>
-                        <button class="btn-editar">Editar</button>
-                        <button class="btn-excluir">Excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Bruno Lima</td>
-                    <td>bruno.lima@email.com</td>
-                    <td>
-                        <button class="btn-editar">Editar</button>
-                        <button class="btn-excluir">Excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Carla Mendes</td>
-                    <td>carla.mendes@email.com</td>
-                    <td>
-                        <button class="btn-editar">Editar</button>
-                        <button class="btn-excluir">Excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Diego Alves</td>
-                    <td>diego.alves@email.com</td>
-                    <td>
-                        <button class="btn-editar">Editar</button>
-                        <button class="btn-excluir">Excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Elisa Rocha</td>
-                    <td>elisa.rocha@email.com</td>
-                    <td>
-                        <button class="btn-editar">Editar</button>
-                        <button class="btn-excluir">Excluir</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ana Souza</td>
+                <td>ana.souza@email.com</td>
+                <td><span class="badge bg-success">Ativo</span></td>
+                <td>
+                    <button class="btn btn-sm btn-warning">Editar</button>
+                    <button class="btn btn-sm btn-danger">Excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bruno Lima</td>
+                <td>bruno.lima@email.com</td>
+                <td><span class="badge bg-secondary">Inativo</span></td>
+                <td>
+                    <button class="btn btn-sm btn-warning">Editar</button>
+                    <button class="btn btn-sm btn-danger">Excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Carla Mendes</td>
+                <td>carla.mendes@email.com</td>
+                <td><span class="badge bg-success">Ativo</span></td>
+                <td>
+                    <button class="btn btn-sm btn-warning">Editar</button>
+                    <button class="btn btn-sm btn-danger">Excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Diego Alves</td>
+                <td>diego.alves@email.com</td>
+                <td><span class="badge bg-warning text-dark">Pendente</span></td>
+                <td>
+                    <button class="btn btn-sm btn-warning">Editar</button>
+                    <button class="btn btn-sm btn-danger">Excluir</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Elisa Rocha</td>
+                <td>elisa.rocha@email.com</td>
+                <td><span class="badge bg-success">Ativo</span></td>
+                <td>
+                    <button class="btn btn-sm btn-warning">Editar</button>
+                    <button class="btn btn-sm btn-danger">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-        <a href="index.html" class="segundario">voltar pra página de inicio</a>
-    </main>
+    <a href="index.html">voltar pra página de início</a>
+</main>
 
 </body>
 </html>

@@ -8,83 +8,79 @@
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <!-- CSS externo, compartilhado com todas as páginas do projeto -->
     <link rel="stylesheet" href="../assets/css/estilo.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     
 </head>
 <body style="background-color: rgba(230, 182, 121, 0.432);">
-    <!-- ===================== HEADER =====================
-         Cabeçalho da página: título principal (h1) e o
-         nome/"logotipo" textual do projeto (h2). -->
-
+    
     <header>
-        <h1>PROJETO Hyperpes</h1>
-        <h2>ExtensivaDev</h2>
-        <a href="login.html" class="btn-login">login</a>
-    </header>
-
-    <!--  NAV 
-         Menu de navegação com os links para as páginas
-         internas do projeto (antes eram links soltos no body). -->
-    <nav id="menu">
-        <ul>
-            <li><a href="atividade-3.html">Ir para aba de Lista</a></li>
-            <li><a href="sandbox.html">Ir para aba Sandbox</a></li>
-            <li><a href="paleta-cores.html">Ver paleta de cores</a></li>
-        </ul>
+    <!-- Navbar do Bootstrap, reaproveitando seus links -->
+    <nav class="navbar navbar-expand-lg" style="background-color: var(--cor-principal);">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="index.html">Hyperpes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="atividade-3.html">Lista</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="sandbox.html">Sandbox</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="paleta-cores.html">Paleta de cores</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-light btn-sm ms-2" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+</header>
 
-    <!--  MAIN 
-         Delimita o conteúdo principal da página: tudo que não
-         é cabeçalho, navegação ou rodapé fica aqui dentro. -->
+<main class="container mt-4">
+    <h1 class="display-4">Nascimento de seu projeto</h1>
+    <h2 class="text-muted">Hyperpes</h2>
+    <p class="lead">
+        O Hyperpes é um sistema de pesquisa voltado para diferentes perfis geracionais,
+        com foco em auto-adaptação para uma melhor interação na resolução do problema.
+    </p>
 
-    <main>
-
-        <!--SECTION: seção tematica "sobre o projeto"-->
-        <section>
-            <h3>Sobre o projeto</h3>
-            <p>
-                O Hyperpes é um sistema de pesquisa voltado para diferentes
-                perfis geracionais, com foco em auto-adaptação para uma
-                melhor interação na resolução de problemas.
-            </p>
-
-            <!-- ARTICLE: conteúdo independente dentro da section.
-                 Cada article funciona como um "card" apresentando
-                 uma das páginas do projeto. -->
-            <article>
-                <h4>Lista de atividades</h4>
-                <p>Página com a lista de itens sa atividade-3.</p>
-            </article>
-
-            <article>
-                <h4>sandbox</h4>
-                <p>Espaço para testar conceitos aprendidos em aula (audio, video, css externo)</p>
-            </article>
-
-            <article>
-                <h4>Paleta de cores</h4>
-                <p>Apresenta a paleta de cores "oficial" adotada no projeto.</p>
-            </article>
-        </section>
-
-        <!-- ASIDE: conteúdo complementar/periférico, não essencial
-             para entender a página principal, mas dá contexto extra. -->
-        
-        <aside>
-            <h4>Sobre o desenvolvimento</h4>
-            <p>
-                Este projeto está sendo desenvolvido como parte das
-                atividades práticas da disciplina de Programação Web,
-                do curso de Análise e Desenvolvimento de Sistemas (IFBA).
-            </p>
-        </aside>
-
-    </main>
+    <!-- Grid: organiza os cards lado a lado em telas grandes, empilhados no celular -->
+    <div class="row mt-4">
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Lista de atividades</h5>
+                    <p class="card-text">Página com a lista de itens da atividade-3.</p>
+                    <a href="atividade-3.html" class="btn btn-outline-primary">Acessar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Sandbox</h5>
+                    <p class="card-text">Espaço para testar conceitos aprendidos (áudio, vídeo, CSS externo).</p>
+                    <a href="sandbox.html" class="btn btn-outline-primary">Acessar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Paleta de cores</h5>
+                    <p class="card-text">Cor principal, tipo de paleta e justificativa do tema do projeto.</p>
+                    <a href="paleta-cores.html" class="btn btn-outline-primary">Acessar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
     <!-- FOOTER
          Rodapé com informações de autoria e créditos. -->
     <footer>
         <p>&copy; 2026 Italo Inácio — Projeto Hyperpes. Todos os direitos reservados.</p>
     </footer>
-   
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,82 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - Hyperpes</title>
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/css/estilo.css">
-</head>
-<body style="background-color:rgba(230, 182, 121, 0.432);">
-    <main class="login-conteiner">
-        <h1>Login</h1>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../assets/css/estilo.css" />
+    <!--bootstrap-->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card p-4">
+            <h1 class="mb-3">Login</h1>
+            <form id="form-login" novalidate>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+                <span class="text-danger small" id="erro-email"></span>
+              </div>
 
-        <!-- novalidate: desliga o balão padrão do navegador, porque
-             vamos mostrar nossas próprias mensagens de erro no JS -->
-             <form id="form-login" novalidate>
-                <div class="campo">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                    <span class="erro" id="erro-email"></span>
-                </div>
+              <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input
+                  type="password"
+                  id="senha"
+                  name="senha"
+                  class="form-control"
+                  required
+                />
+                <span class="text-danger small" id="erro-senha"></span>
+              </div>
 
-                <div class="campo">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" required>
-                <span class="erro" id="erro-senha"></span>
-                </div>
-
-                <button type="submit" class="btn-login">Entrar</button>
-             </form>
-
-             <a href="index.html" class="segundario">Voltar pra página de inicio</a>
+              <button type="submit" class="btn btn-primary w-100">
+                Entrar
+              </button>
+            </form>
+            <a href="index.html" class="segundario"
+              >Voltar pra página de inicio</a
+            >
+          </div>
+        </div>
+      </div>
     </main>
 
+    <a href="index.html" class="segundario">Voltar pra página de inicio</a>
+
     <script>
-        const form = document.getElementById('form-login');
-        const email = document.getElementById('email');
-        const senha = document.getElementById('senha');
-        const erroEmail = document.getElementById('erro-email');
-        const erroSenha = document.getElementById('erro-senha');
+      const form = document.getElementById("form-login");
+      const email = document.getElementById("email");
+      const senha = document.getElementById("senha");
+      const erroEmail = document.getElementById("erro-email");
+      const erroSenha = document.getElementById("erro-senha");
 
-        form.addEventListener('submit', function (event) {
-            // impede o envio real do formulário (não há backend)
-            event.preventDefault();
+      form.addEventListener("submit", function (event) {
+        // impede o envio real do formulário (não há backend)
+        event.preventDefault();
 
-            let valido = true;
+        let valido = true;
 
-            // limpa mensagens de erro antigas antes de validar de novo
-            erroEmail.textContent = '';
-            erroSenha.textContent = '';
-            email.classList.remove('campo-invalido');
-            senha.classList.remove('campo-invalido');
+        // limpa mensagens de erro antigas antes de validar de novo
+        erroEmail.textContent = "";
+        erroSenha.textContent = "";
+        email.classList.remove("is-invalid");
+        senha.classList.remove("is-invalid");
 
-            // validação: e-mail obrigatório
-            if (email.value.trim() === '') {
-                erroEmail.textContent = 'O e-mail é obrigatório.';
-                email.classList.add('campo-invalido');
-                valido = false;
-            }
-            // validação: formato de e-mail (checkValidity usa a regra do type="email")
-            else if (!email.checkValidity()) {
-                erroEmail.textContent = 'Digite um e-mail válido.';
-                email.classList.add('campo-invalido');
-                valido = false;
-            }
+        // validação: e-mail obrigatório
+        if (email.value.trim() === "") {
+          erroEmail.textContent = "O e-mail é obrigatório.";
+          email.classList.add("is-invalid");
+          valido = false;
+        }
+        // validação: formato de e-mail (checkValidity usa a regra do type="email")
+        else if (!email.checkValidity()) {
+          erroEmail.textContent = "Digite um e-mail válido.";
+          email.classList.add("is-invalid");
+          valido = false;
+        }
 
-            // validação: senha obrigatória
-            if (senha.value.trim() === '') {
-                erroSenha.textContent = 'A senha é obrigatória.';
-                senha.classList.add('campo-invalido');
-                valido = false;
-            }
+        // validação: senha obrigatória
+        if (senha.value.trim() === "") {
+          erroSenha.textContent = "A senha é obrigatória.";
+          senha.classList.add("is-invalid");
+          valido = false;
+        }
 
-            // se passou nas validações, simula um login bem-sucedido
-            if (valido) {
-                window.location.href = 'admin.html';
-            }
-        });
+        // se passou nas validações, simula um login bem-sucedido
+        if (valido) {
+          window.location.href = "admin.html";
+        }
+      });
     </script>
-
-</body>
+  </body>
 </html>

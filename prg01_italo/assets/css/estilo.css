@@ -30,40 +30,6 @@ h1 {
     color: var(--cor-principal);
 }
 
-/* ---------- Menu de navegação ---------- */
-
-/* Remove o estilo padrão de lista (bolinhas) e deixa os itens
-   um do lado do outro, em vez de um embaixo do outro */
-
-#menu ul{
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    padding: 10px 20px;
-    margin: 0;
-    background-color: var(--cor-principal);
-    flex-direction: column;
-}
-
-#menu li {
-    padding: 0;             /* tira o padding duplicado do item */
-}
-
-/*Cada item do menu */
-#menu li a{
-    padding: 5px 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-}
-
-/*efeito ao passar o mouse em cima do link*/
-#menu li a:hover{
-    color: var(--cor-escura);
-    background-color: rgba(255, 255, 255, 0.2); 
-    border-radius: 4px;
-}
 
 .segundario{
     text-decoration: none;
@@ -74,18 +40,6 @@ h1 {
     color: rgb(47, 125, 241);
     font-size: 22px;
     font-weight: bold;
-}
-
-
-@media (min-width: 601px) {
-    #menu ul {
-        flex-direction: row;
-        gap: 20px;
-}
-
-#menu li a {
-        display: inline-block;
-    }
 }
 
 img{
@@ -103,133 +57,30 @@ audio{
     max-width: 100%;
 }
 
-.btn-login{
-    display: inline-block;
-    background-color: var(--cor-escura);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 20px;
-    border-radius: 6px;
-    margin-top: 10px;
+/* Faz o footer "grudar" no fim da tela, mesmo em páginas com pouco conteúdo */
+html, body {
+    height: 100%;
 }
 
-.btn-login:hover{
-    background-color: var(--cor-clara);
-}
-
-.login-container {
-    max-width: 350px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-}
-
-.campo {
-    margin-bottom: 15px;
+body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
-.campo label {
-    margin-bottom: 5px;
-    font-weight: bold;
+main {
+    flex: 1;   /* o main "cresce" para ocupar o espaço disponível,
+                  empurrando o footer para baixo */
 }
 
-.campo input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Borda vermelha quando o campo está inválido (classe adicionada via JS) */
-.campo-invalido {
-    border-color: red !important;
-}
-
-/* Mensagem de erro abaixo do campo */
-.erro {
-    color: red;
-    font-size: 0.85em;
-    min-height: 1em;
-}
-
-.admin-container {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 20px;
-}
-
-.tabela-usuarios {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    margin: 20px 0;
-    display: block;
-    overflow-x: auto ;
-    white-space: nowrap;
-}
-
-@media (min-width: 601px) {
-    .tabela-usuarios {
-        display: table;
-        white-space: normal;
-    }
-}
-.tabela-usuarios th,
-.tabela-usuarios td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.tabela-usuarios th {
-    background-color: var(--cor-principal);
-    color: white;
-}
-
-/* Zebra: linhas alternadas com fundo levemente diferente, facilita leitura */
-.tabela-usuarios tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.btn-editar,
-.btn-excluir {
-    padding: 6px 12px;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-    margin-right: 5px;
-    font-size: 0.9em;
-}
-
-.btn-editar {
-    background-color: var(--cor-media);
-}
-
-.btn-editar:hover {
+footer {
     background-color: var(--cor-escura);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-.btn-excluir {
-    background-color: #cc3333;
-}
-
-.btn-excluir:hover {
-    background-color: #991f1f;
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    iframe {
-        height: 300px;
-    }
-}
-
-@media (min-width: 1025px) {
-    iframe {
-        width: 560px;
-        height: 315px;
-    }
+footer a {
+    color: var(--cor-clara);
 }
